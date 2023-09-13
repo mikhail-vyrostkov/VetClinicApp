@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f9b3eb00-a38d-4061-a89a-bddc37e3ae2a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ER-диаграмма сущностей в сервисе _Ветклиника_(в нотации UML).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/GrpcApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/dto/PetRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/dto/PetResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/enumUnit/DaysOfWeek.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/enumUnit/Timestamps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/Booking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/DutySchedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/Owner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/Pet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/PetType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/Speciality.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/Vaccination.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/Vet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/Visit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/BookingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/DutyScheduleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/OwnerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/PetRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/PetTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/SpecialityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/VaccinationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/VetRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/VisitRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/service/PetService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/service/PetServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/serviceGrpc/GrpcPetServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/test/java/ru/vyrostkov/grpc/TestApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/test/java/ru/vyrostkov/grpc/config/GrpcPetServiceTestConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/test/java/ru/vyrostkov/grpc/repositories/PetRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/test/java/ru/vyrostkov/grpc/repositories/PgContainerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic-grpc-service/src/test/java/ru/vyrostkov/grpc/serviceGrpc/GrpcPetServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/0-infra/1-create_schema/01-create_schema-vetclinic.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/0-infra/1-create_schema/01-create_schema-vetclinic_rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/0-infra/1-create_schema/infra-create_schema-changelog.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/0-infra/infra_changelog.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/01-create-owners-table-rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/01-create-owners-table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/02-create-pet-types-table-rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/02-create-pet-types-table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/03-create-vaccinations-table-rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/03-create-vaccinations-table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/04-create-pets-table-rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/04-create-pets-table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/05-create-specialities-table-rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/05-create-specialities-table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/06-create-vets-table-rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/06-create-vets-table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/07-create-duty_schedules-table-rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/07-create-duty_schedules-table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/08-create-bookings-table-rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/08-create-bookings-table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/09-create-visits-table-rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/09-create-visits-table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/10-create-vets_specialities-table-rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/10-create-vets_specialities-table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/11-create-vets_duty_schedules-table-rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/11-create-vets_duty_schedules-table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/core-create_table-changelog.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/2-insert_data/01-insert_data_pet_types-rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/2-insert_data/01-insert_data_pet_types.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/2-insert_data/02-insert_data_vets-rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/2-insert_data/02-insert_data_vets.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/2-insert_data/03-insert_data_specialities-rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/2-insert_data/03-insert_data_specialities.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/2-insert_data/04-insert_data_vets_specialities-rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/2-insert_data/04-insert_data_vets_specialities.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/2-insert_data/05-insert_data_duty_schedules-rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/2-insert_data/05-insert_data_duty_schedules.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/2-insert_data/06-insert_data_vets_duty_schedules-rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/2-insert_data/06-insert_data_vets_duty_schedules.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/2-insert_data/core-insert_data-changelog.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/core_changelog.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db-migration/src/main/resources/master-changelog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface-grpc/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface-grpc/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface-grpc/src/main/proto/Pet.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface-grpc/src/main/proto/Vet.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2U9RHs2m2OyImTEexZG6uuBLPBY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "corretto-17",
+    "last_opened_file_path": "/Users/m.vyrostkov/IdeaProjects/petProject/VetClinicApp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.56206894",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "cb7e15e99f360c85f7e2f40918525852",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/clinic-grpc-service/src/test/java/ru/vyrostkov/" />
+      <recent name="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc" />
+      <recent name="$PROJECT_DIR$/clinic-grpc-service/src/main/resources" />
+      <recent name="$PROJECT_DIR$/clinic-data/src/main/java/ru/vyrostkov/clinicdata" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.vyrostkov.grpc.serviceGrpc" />
+      <recent name="ru.vyrostkov.grpc.repositories" />
+      <recent name="ru.vyrostkov.grpc" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.vyrostkov.grpc.service" />
+      <recent name="ru.vyrostkov.clinicdata.service" />
+      <recent name="" />
+      <recent name="ru.vyrostkov.grpc" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.GrpcPetServiceImplTest">
+    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="GrpcPetServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clinic-grpc-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.vyrostkov.grpc.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.vyrostkov.grpc.serviceGrpc" />
+      <option name="MAIN_CLASS_NAME" value="ru.vyrostkov.grpc.serviceGrpc.GrpcPetServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GrpcPetServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clinic-grpc-service" />
+      <option name="PACKAGE_NAME" value="ru.vyrostkov.grpc" />
+      <option name="MAIN_CLASS_NAME" value="ru.vyrostkov.grpc.GrpcPetServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GrpcPetServiceImplTest.createPetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clinic-grpc-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.vyrostkov.grpc.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.vyrostkov.grpc.serviceGrpc" />
+      <option name="MAIN_CLASS_NAME" value="ru.vyrostkov.grpc.serviceGrpc.GrpcPetServiceImplTest" />
+      <option name="METHOD_NAME" value="createPetTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PetRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clinic-grpc-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.vyrostkov.grpc.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.vyrostkov.grpc.repositories" />
+      <option name="MAIN_CLASS_NAME" value="ru.vyrostkov.grpc.repositories.PetRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PetRepositoryTest.givenPetObject_whenSave_thenReturnSavePet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clinic-grpc-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.vyrostkov.grpc.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.vyrostkov.grpc.repositories" />
+      <option name="MAIN_CLASS_NAME" value="ru.vyrostkov.grpc.repositories.PetRepositoryTest" />
+      <option name="METHOD_NAME" value="givenPetObject_whenSave_thenReturnSavePet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GrpcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="clinic-grpc-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.vyrostkov.grpc.GrpcApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.GrpcPetServiceImplTest" />
+        <item itemvalue="JUnit.GrpcPetServiceImplTest.createPetTest" />
+        <item itemvalue="JUnit.PetRepositoryTest.givenPetObject_whenSave_thenReturnSavePet" />
+        <item itemvalue="JUnit.PetRepositoryTest" />
+        <item itemvalue="HTTP Request.generated-requests | #2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f9b3eb00-a38d-4061-a89a-bddc37e3ae2a" name="Changes" comment="" />
+      <created>1692349727308</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1692349727308</updated>
+      <workItem from="1692349728493" duration="24256000" />
+      <workItem from="1692612454342" duration="10616000" />
+      <workItem from="1693227677184" duration="604000" />
+      <workItem from="1693231716285" duration="6237000" />
+      <workItem from="1694084762498" duration="734000" />
+      <workItem from="1694098814396" duration="294000" />
+      <workItem from="1694099134682" duration="166000" />
+      <workItem from="1694100412093" duration="6000" />
+      <workItem from="1694103492418" duration="2231000" />
+      <workItem from="1694157965702" duration="45262000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

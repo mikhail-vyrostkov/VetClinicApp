@@ -1,0 +1,16 @@
+INSERT INTO vetclinic.vets_specialities(vet_id, speciality_id) VALUES (1, 1);
+INSERT INTO vetclinic.vets_specialities(vet_id, speciality_id) VALUES (1, 7);
+INSERT INTO vetclinic.vets_specialities(vet_id, speciality_id) VALUES (2, 3);
+INSERT INTO vetclinic.vets_specialities(vet_id, speciality_id) VALUES (3, 4);
+INSERT INTO vetclinic.vets_specialities(vet_id, speciality_id) VALUES (4, 1);
+INSERT INTO vetclinic.vets_specialities(vet_id, speciality_id) VALUES (5, 9);
+INSERT INTO vetclinic.vets_specialities(vet_id, speciality_id) VALUES (6, 10);
+INSERT INTO vetclinic.vets_specialities(vet_id, speciality_id) VALUES (7, 10);
+INSERT INTO vetclinic.vets_specialities(vet_id, speciality_id) VALUES (8, 12);
+INSERT INTO vetclinic.vets_specialities(vet_id, speciality_id) VALUES (9, 2);
+INSERT INTO vetclinic.vets_specialities(vet_id, speciality_id) VALUES (10, 6);
+INSERT INTO vetclinic.vets_specialities(vet_id, speciality_id) VALUES (2, 8);
+INSERT INTO vetclinic.vets_specialities(vet_id, speciality_id) VALUES (10, 12);
+INSERT INTO vetclinic.vets_specialities(vet_id, speciality_id) VALUES (10, 1);
+INSERT INTO vetclinic.vets_specialities(vet_id, speciality_id) VALUES (3, 9);
+INSERT INTO vetclinic.vets_specialities(vet_id, speciality_id) VALUES (3, 11);

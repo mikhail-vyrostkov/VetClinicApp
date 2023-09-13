@@ -1,0 +1,266 @@
+databaseChangeLog:
+  - changeSet:
+      id: core_01-create-owners-table
+      author: m.vyrostkov
+      created: 2023-30-07
+
+      preConditions:
+        - not:
+            - tableExists:
+                schemaName: vetclinic
+                tableName: owners
+
+      sqlFile:
+        path: 01-create-owners-table.sql
+        splitStatements: false
+        relativeToChangelogFile: true
+
+      rollback:
+        sqlFile:
+          path: 01-create-owners-table-rollback.sql
+          splitStatements: false
+          relativeToChangelogFile: true
+
+  - changeSet:
+      id: core_02-create-pet-types-table
+      author: m.vyrostkov
+      created: 2023-30-07
+
+      preConditions:
+        - not:
+            - tableExists:
+                schemaName: vetclinic
+                tableName: types
+
+      sqlFile:
+        path: 02-create-pet-types-table.sql
+        splitStatements: false
+        relativeToChangelogFile: true
+
+      rollback:
+        sqlFile:
+          path: 02-create-pet-types-table-rollback.sql
+          splitStatements: false
+          relativeToChangelogFile: true
+
+  - changeSet:
+      id: core_03-create-vaccinations-table
+      author: m.vyrostkov
+      created: 2023-30-07
+
+      preConditions:
+        - not:
+            - tableExists:
+                schemaName: vetclinic
+                tableName: vaccinations
+
+      sqlFile:
+        path: 03-create-vaccinations-table.sql
+        splitStatements: false
+        relativeToChangelogFile: true
+
+      rollback:
+        sqlFile:
+          path: 03-create-vaccinations-table-rollback.sql
+          splitStatements: false
+          relativeToChangelogFile: true
+
+  - changeSet:
+      id: core_04-create-pets-table
+      author: m.vyrostkov
+      created: 2023-30-07
+
+      preConditions:
+        - not:
+            - tableExists:
+                schemaName: vetclinic
+                tableName: pets
+        - tableExists:
+            schemaName: vetclinic
+            tableName: vaccinations
+        - tableExists:
+            schemaName: vetclinic
+            tableName: types
+        - tableExists:
+            schemaName: vetclinic
+            tableName: owners
+
+      sqlFile:
+        path: 04-create-pets-table.sql
+        splitStatements: false
+        relativeToChangelogFile: true
+
+      rollback:
+        sqlFile:
+          path: 04-create-pets-table-rollback.sql
+          splitStatements: false
+          relativeToChangelogFile: true
+
+  - changeSet:
+      id: core_05-create-specialities-table
+      author: m.vyrostkov
+      created: 2023-30-07
+
+      preConditions:
+        - not:
+            - tableExists:
+                schemaName: vetclinic
+                tableName: specialities
+
+      sqlFile:
+        path: 05-create-specialities-table.sql
+        splitStatements: false
+        relativeToChangelogFile: true
+
+      rollback:
+        sqlFile:
+          path: 05-create-specialities-table-rollback.sql
+          splitStatements: false
+          relativeToChangelogFile: true
+
+  - changeSet:
+      id: core_06-create-vets-table
+      author: m.vyrostkov
+      created: 2023-30-07
+
+      preConditions:
+        - not:
+            - tableExists:
+                schemaName: vetclinic
+                tableName: vets
+
+      sqlFile:
+        path: 06-create-vets-table.sql
+        splitStatements: false
+        relativeToChangelogFile: true
+
+      rollback:
+        sqlFile:
+          path: 06-create-vets-table-rollback.sql
+          splitStatements: false
+          relativeToChangelogFile: true
+
+  - changeSet:
+      id: core_07-create-duty_schedules-table
+      author: m.vyrostkov
+      created: 2023-30-07
+
+      preConditions:
+        - not:
+            - tableExists:
+                schemaName: vetclinic
+                tableName: duty_schedules
+        - tableExists:
+            schemaName: vetclinic
+            tableName: vets
+
+      sqlFile:
+        path: 07-create-duty_schedules-table.sql
+        splitStatements: false
+        relativeToChangelogFile: true
+
+      rollback:
+        sqlFile:
+          path: 07-create-duty_schedules-table-rollback.sql
+          splitStatements: false
+          relativeToChangelogFile: true
+
+  - changeSet:
+      id: core_08-create-bookings-table
+      author: m.vyrostkov
+      created: 2023-30-07
+
+      preConditions:
+        - not:
+            - tableExists:
+                schemaName: vetclinic
+                tableName: bookings
+        - tableExists:
+            schemaName: vetclinic
+            tableName: vets
+        - tableExists:
+            schemaName: vetclinic
+            tableName: pets
+
+      sqlFile:
+        path: 08-create-bookings-table.sql
+        splitStatements: false
+        relativeToChangelogFile: true
+
+      rollback:
+        sqlFile:
+          path: 08-create-bookings-table-rollback.sql
+          splitStatements: false
+          relativeToChangelogFile: true
+
+  - changeSet:
+      id: core_09-create-visits-table
+      author: m.vyrostkov
+      created: 2023-30-07
+
+      preConditions:
+        - not:
+            - tableExists:
+                schemaName: vetclinic
+                tableName: visits
+        - tableExists:
+            schemaName: vetclinic
+            tableName: vets
+        - tableExists:
+            schemaName: vetclinic
+            tableName: pets
+
+      sqlFile:
+        path: 09-create-visits-table.sql
+        splitStatements: false
+        relativeToChangelogFile: true
+
+      rollback:
+        sqlFile:
+          path: 09-create-visits-table-rollback.sql
+          splitStatements: false
+          relativeToChangelogFile: true
+
+  - changeSet:
+      id: core_10-create-vets_specialities-table
+      author: m.vyrostkov
+      created: 2023-30-07
+
+      preConditions:
+        - not:
+            - tableExists:
+                schemaName: vetclinic
+                tableName: vets_specialities
+
+      sqlFile:
+        path: 10-create-vets_specialities-table.sql
+        splitStatements: false
+        relativeToChangelogFile: true
+
+      rollback:
+        sqlFile:
+          path: 10-create-vets_specialities-table-rollback.sql
+          splitStatements: false
+          relativeToChangelogFile: true
+
+  - changeSet:
+      id: core_11-create-vets_duty_schedules-table
+      author: m.vyrostkov
+      created: 2023-30-07
+
+      preConditions:
+        - not:
+            - tableExists:
+                schemaName: vetclinic
+                tableName: vets_duty_schedules
+
+      sqlFile:
+        path: 11-create-vets_duty_schedules-table.sql
+        splitStatements: false
+        relativeToChangelogFile: true
+
+      rollback:
+        sqlFile:
+          path: 11-create-vets_duty_schedules-table-rollback.sql
+          splitStatements: false
+          relativeToChangelogFile: true

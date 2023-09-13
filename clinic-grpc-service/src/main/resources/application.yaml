@@ -1,0 +1,19 @@
+grpc:
+  server:
+    port: 9091
+
+spring:
+  liquibase:
+    change-log: classpath:master-changelog.yaml
+    enabled: true
+    contexts: infra,core
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${DB_HOST:localhost}:5432/pet_clinic
+    username: postgres
+    password: 1530258mvr

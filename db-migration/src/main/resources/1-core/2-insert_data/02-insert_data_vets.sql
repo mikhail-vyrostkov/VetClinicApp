@@ -1,0 +1,10 @@
+INSERT INTO vetclinic.vets(lastname,firstname, middlename, age) VALUES ('Vyrostkov', 'Mikhail', 'Yurievich', 28);
+INSERT INTO vetclinic.vets(lastname, firstname, middlename, age) VALUES ('Grabovsky', 'Dmitry', 'Evgenievich', 47);
+INSERT INTO vetclinic.vets(lastname, firstname, middlename, age) VALUES ('Ignatova', 'Tatyana', 'Sergeevna', 32);
+INSERT INTO vetclinic.vets(lastname, firstname, middlename, age) VALUES ('Fedulov', 'Nikita', 'Sergeevich', 29);
+INSERT INTO vetclinic.vets(lastname, firstname, middlename, age) VALUES ('Ivanov', 'Oleg', 'Andreevich', 29);
+INSERT INTO vetclinic.vets(lastname, firstname, middlename, age) VALUES ('Solovieva', 'Nadezhda', 'Viktorovna', 33);
+INSERT INTO vetclinic.vets(lastname, firstname, middlename, age) VALUES ('Kulpin', 'Andrey', 'Andreevich', 22);
+INSERT INTO vetclinic.vets(lastname, firstname, middlename, age) VALUES ('Shevchenko', 'Tatyana', 'Yurievna', 32);
+INSERT INTO vetclinic.vets(lastname, firstname, middlename, age) VALUES ('Yusupova', 'Olesya', 'Sergeevna', 37);
+INSERT INTO vetclinic.vets(lastname, firstname, middlename, age) VALUES ('Omelchenko', 'Alexey', 'Dmitrievich', 28);

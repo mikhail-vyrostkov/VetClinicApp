@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>VetClinicApp</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>interface-grpc</module>
+        <module>clinic-grpc-service</module>
+        <module>db-migration</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <protobuf.version>3.18.0</protobuf.version>
+        <protobuf-plugin.version>0.6.1</protobuf-plugin.version>
+        <grpc.version>1.53.0</grpc.version>
+<!--        <lombok.version>1.18.28</lombok.version>-->
+<!--        &lt;!&ndash; Postgres &ndash;&gt;-->
+<!--        <postgres.version>42.3.6</postgres.version>-->
+<!--        &lt;!&ndash; Spring &ndash;&gt;-->
+<!--        <spring.boot.version>3.1.2</spring.boot.version>-->
+<!--        &lt;!&ndash; Test &ndash;&gt;-->
+<!--        <testcontainers.version>1.17.2</testcontainers.version>-->
+<!--        &lt;!&ndash; Javax &ndash;&gt;-->
+<!--        <javax.version>1.3.2</javax.version>-->
+
+    </properties>
+
+</project>

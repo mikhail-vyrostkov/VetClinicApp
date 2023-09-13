@@ -1,0 +1,12 @@
+INSERT INTO vetclinic.specialities(description) VALUES ('Veterinary surgeon');
+INSERT INTO vetclinic.specialities(description) VALUES ('Veterinary endocrinologist');
+INSERT INTO vetclinic.specialities(description) VALUES ('Veterinary oncologist');
+INSERT INTO vetclinic.specialities(description) VALUES ('Veterinary cardiologist');
+INSERT INTO vetclinic.specialities(description) VALUES ('Veterinary dermatologist');
+INSERT INTO vetclinic.specialities(description) VALUES ('Veterinary neurologist');
+INSERT INTO vetclinic.specialities(description) VALUES ('Veterinary ophthalmologist');
+INSERT INTO vetclinic.specialities(description) VALUES ('Veterinary anesthesiologist');
+INSERT INTO vetclinic.specialities(description) VALUES ('Veterinary dentist');
+INSERT INTO vetclinic.specialities(description) VALUES ('Veterinary Immunologist');
+INSERT INTO vetclinic.specialities(description) VALUES ('Veterinary bacteriologist');
+INSERT INTO vetclinic.specialities(description) VALUES ('Veterinary pharmacologist');

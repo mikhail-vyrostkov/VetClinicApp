@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: infra_create-schema_vetclinic
+      author: m.vyrostkov
+      created: 2023-30-07
+
+      sqlFile:
+        path: 01-create_schema-vetclinic.sql
+        splitStatements: false
+        relativeToChangelogFile: true
+
+      rollback:
+        sqlFile:
+          path: 01-create_schema-vetclinic_rollback.sql
+          splitStatements: false
+          relativeToChangelogFile: true

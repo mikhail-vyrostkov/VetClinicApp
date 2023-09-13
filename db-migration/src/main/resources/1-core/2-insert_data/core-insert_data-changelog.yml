@@ -1,0 +1,137 @@
+databaseChangeLog:
+  - changeSet:
+      id: core_01-insert_data_pet_types
+      author: m.vyrostkov
+      created: 2023-08-02
+
+      preConditions:
+        - tableExists:
+            schemaName: vetclinic
+            tableName: types
+
+      sqlFile:
+        path: 01-insert_data_pet_types.sql
+        splitStatements: false
+        relativeToChangelogFile: true
+
+      rollback:
+        sqlFile:
+          path: 01-insert_data_pet_types-rollback.sql
+          splitStatements: false
+          relativeToChangelogFile: true
+
+  - changeSet:
+      id: core_02-insert_data_vets
+      author: m.vyrostkov
+      created: 2023-08-02
+
+      preConditions:
+        - tableExists:
+            schemaName: vetclinic
+            tableName: vets
+
+      sqlFile:
+        path: 02-insert_data_vets.sql
+        splitStatements: false
+        relativeToChangelogFile: true
+
+      rollback:
+        sqlFile:
+          path: 02-insert_data_vets-rollback.sql
+          splitStatements: false
+          relativeToChangelogFile: true
+  - changeSet:
+      id: core_03-insert_data_specialities
+      author: m.vyrostkov
+      created: 2023-08-02
+
+      preConditions:
+        - tableExists:
+            schemaName: vetclinic
+            tableName: specialities
+
+      sqlFile:
+        path: 03-insert_data_specialities.sql
+        splitStatements: false
+        relativeToChangelogFile: true
+
+      rollback:
+        sqlFile:
+          path: 03-insert_data_specialities-rollback.sql
+          splitStatements: false
+          relativeToChangelogFile: true
+
+  - changeSet:
+      id: core_04-insert_data_vets_specialities
+      author: m.vyrostkov
+      created: 2023-08-02
+
+      preConditions:
+        - tableExists:
+            schemaName: vetclinic
+            tableName: specialities
+        - tableExists:
+            schemaName: vetclinic
+            tableName: vets
+        - tableExists:
+            schemaName: vetclinic
+            tableName: vets_specialities
+
+      sqlFile:
+        path: 04-insert_data_vets_specialities.sql
+        splitStatements: false
+        relativeToChangelogFile: true
+
+      rollback:
+        sqlFile:
+          path: 04-insert_data_vets_specialities-rollback.sql
+          splitStatements: false
+          relativeToChangelogFile: true
+
+  - changeSet:
+      id: core_05-insert_data_duty_schedules
+      author: m.vyrostkov
+      created: 2023-08-02
+
+      preConditions:
+        - tableExists:
+            schemaName: vetclinic
+            tableName: duty_schedules
+
+      sqlFile:
+        path: 05-insert_data_duty_schedules.sql
+        splitStatements: false
+        relativeToChangelogFile: true
+
+      rollback:
+        sqlFile:
+          path: 05-insert_data_duty_schedules-rollback.sql
+          splitStatements: false
+          relativeToChangelogFile: true
+
+  - changeSet:
+      id: core_06-insert_data_vets_duty_schedules
+      author: m.vyrostkov
+      created: 2023-08-02
+
+      preConditions:
+        - tableExists:
+            schemaName: vetclinic
+            tableName: duty_schedules
+        - tableExists:
+            schemaName: vetclinic
+            tableName: vets
+        - tableExists:
+            schemaName: vetclinic
+            tableName: vets_duty_schedules
+
+      sqlFile:
+        path: 06-insert_data_vets_duty_schedules.sql
+        splitStatements: false
+        relativeToChangelogFile: true
+
+      rollback:
+        sqlFile:
+          path: 06-insert_data_vets_duty_schedules-rollback.sql
+          splitStatements: false
+          relativeToChangelogFile: true

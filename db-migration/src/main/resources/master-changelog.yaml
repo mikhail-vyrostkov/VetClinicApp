@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      relativeToChangelogFile: true
+      file: 0-infra/infra_changelog.yml
+      context: infra
+  - include:
+      relativeToChangelogFile: true
+      file: 1-core/core_changelog.yml
+      context: core
