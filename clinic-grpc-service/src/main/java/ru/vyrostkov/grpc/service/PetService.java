@@ -1,8 +1,5 @@
 package ru.vyrostkov.grpc.service;
 
-
-
-
 import ru.vyrostkov.grpc.dto.PetRequestDTO;
 import ru.vyrostkov.grpc.dto.PetResponseDTO;
 
@@ -12,13 +9,13 @@ public interface PetService {
 
     int createPet(PetRequestDTO pet);
 
-    PetResponseDTO findByIDPet(long id);
+    PetResponseDTO findByIDPet(int id);
 
     List<PetResponseDTO> findAllPet();
 
     List<PetResponseDTO> findAllByNamePet(String Name);
 
-    void deletePet(long petId);
+    void deletePet(int petId);
 
     PetResponseDTO updatePet(PetRequestDTO pet);
 }

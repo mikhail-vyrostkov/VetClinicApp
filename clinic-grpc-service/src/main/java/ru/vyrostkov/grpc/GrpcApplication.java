@@ -2,9 +2,10 @@ package ru.vyrostkov.grpc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication(exclude = JmxAutoConfiguration.class)
+@SpringBootApplication
+@EnableJpaRepositories
 public class GrpcApplication {
 
 	public static void main(String[] args) {

@@ -16,7 +16,7 @@ public class PgContainerTest {
     protected static final PostgreSQLContainer<?> pgContainer = new PostgreSQLContainer<>("postgres")
             .withDatabaseName(DATABASE_NAME)
             .withUsername("postgres")
-            .withPassword("1530258mvr");
+            .withPassword("test");
 
     public static class PgContainerInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
         @Override

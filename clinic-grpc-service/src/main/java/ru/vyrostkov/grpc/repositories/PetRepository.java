@@ -8,8 +8,8 @@ import ru.vyrostkov.grpc.models.PetType;
 import java.util.List;
 
 @Repository
-public interface PetRepository extends JpaRepository<Pet, Long> {
+public interface PetRepository extends JpaRepository<Pet, Integer> {
 
     List<Pet> findAllByPetType(PetType petType);
-    List<Pet> findByName(String name);
+    List<Pet> findAllByName(String name);
 }

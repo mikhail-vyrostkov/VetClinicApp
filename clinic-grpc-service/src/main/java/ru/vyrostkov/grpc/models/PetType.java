@@ -1,7 +1,13 @@
 package ru.vyrostkov.grpc.models;
 
-import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Data
 @NoArgsConstructor
@@ -11,12 +17,10 @@ import lombok.*;
 public class PetType extends BaseEntity {
 
     @Builder
-    public PetType(Long id, String name) {
+    public PetType(int id, String name) {
         super(id);
         this.name = name;
     }
-
     @Column(name = "name")
     private String name;
-
 }

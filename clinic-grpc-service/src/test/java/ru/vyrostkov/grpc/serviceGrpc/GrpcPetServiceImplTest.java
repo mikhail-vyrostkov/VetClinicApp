@@ -1,253 +1,154 @@
 package ru.vyrostkov.grpc.serviceGrpc;
 
+import io.grpc.Metadata;
+import io.grpc.Status;
+import io.grpc.StatusRuntimeException;
+import io.grpc.protobuf.ProtoUtils;
+import lombok.extern.log4j.Log4j2;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
-import ru.vyrostkov.grpc.config.GrpcPetServiceTestConfiguration;
+import ru.vyrostkov.grpc.GrpcApplication;
+import ru.vyrostkov.grpc.dto.PetRequestDTO;
+import ru.vyrostkov.grpc.dto.PetResponseDTO;
+import ru.vyrostkov.grpc.models.Pet;
+import ru.vyrostkov.grpc.models.PetType;
 import ru.vyrostkov.grpc.server.grpc_server.pet.PetOuterClass;
 import ru.vyrostkov.grpc.server.grpc_server.pet.PetServiceGrpc;
+import ru.vyrostkov.grpc.service.PetService;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.time.LocalDate;
+
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(properties = {
-        "grpc.server.inProcessName=test", // Enable inProcess server
-        "grpc.server.port=9092", // Disable external server
-        "grpc.client.inProcess.address=in-process:test" // Configure the client to connect to the inProcess server
+        "grpc.server.inProcessName=test",
+        "grpc.server.port=9092",
+        "grpc.client.petService.address=in-process:test"
 })
-@SpringJUnitConfig(classes = { GrpcPetServiceTestConfiguration.class })
-@DirtiesContext
+@SpringJUnitConfig(classes = {GrpcApplication.class})
+@Log4j2
 public class GrpcPetServiceImplTest {
 
-    @GrpcClient("inProcess")
+    @MockBean
+    PetService petService;
+    @GrpcClient("petService")
     private PetServiceGrpc.PetServiceBlockingStub petServiceBlockingStub;
+    final int petId = 1;
+    Pet pet;
+    PetRequestDTO petRequestDTO;
+    PetResponseDTO petResponseDTO;
+
+    @BeforeEach
+    void setUp() {
+        pet = Pet
+                .builder()
+                .name("Bob")
+                .petType(PetType.builder().name("dog").build())
+                .birthDate(LocalDate.parse("2020-12-11"))
+                .build();
+
+        petRequestDTO = PetRequestDTO
+                .builder()
+                .petName("Bob")
+                .petType("dog")
+                .petBirthDate("2020-12-11")
+                .build();
+
+        petResponseDTO = PetResponseDTO
+                .builder()
+                .petName("Bob")
+                .petType("dog")
+                .build();
+    }
 
     @Test
     @DisplayName("JUnit grpc test for create pet")
-    void createPetTest() {
-        PetOuterClass.CreatePetRequest createPetRequest = PetOuterClass.CreatePetRequest
+    public void createPetTest() {
+
+        doReturn(1)
+                .when(petService)
+                .createPet(any());
+
+        PetOuterClass.CreatePetRequest request = PetOuterClass.CreatePetRequest
                 .newBuilder()
                 .setPet(PetOuterClass.CreatePetRequest.Pet
                         .newBuilder()
-                        .setPetId(1)
                         .setPetName("Bob")
-                        .setPetType("Dog")
-                        .setPetBirthDate("2010-11-03")
-                        .setOwnerLastName("Vyrostkov")
-                        .setOwnerFirstName("Mikhail")
-                        .setOwnerMiddleName("Yurevich")
-                        .setOwnerAge(28)
-                        .setOwnerAddress("Moscow")
-                        .setOwnerTelephone("89258127349")
-                        .setVaccinationName("Covid_19")
-                        .setVaccinationDate("2019-12-24")
+                        .setPetType("dog")
+                        .setPetBirthDate("2020-12-11")
                         .build())
                 .build();
 
-        PetOuterClass.CreatePetResponse createPetResponse = petServiceBlockingStub.createPet(createPetRequest);
+        PetOuterClass.CreatePetResponse createPetResponse =
+                petServiceBlockingStub.createPet(request);
 
-        assertNotNull(createPetResponse);
-        assertEquals(1, createPetResponse.getPetId());
+        assertThat(createPetResponse).isNotNull();
+        assertThat(petId).isEqualTo(createPetResponse.getPetId());
 
+        verify(petService).createPet(petRequestDTO);
     }
 
+    @Test
+    @DisplayName("JUnit grpc test for find pet by id")
+    public void findByIDPetTest() {
 
+        doReturn(petResponseDTO)
+                .when(petService)
+                .findByIDPet(anyInt());
 
-//    @InjectMocks
-//    private GrpcPetServiceImpl grpcPetService;
-//    @Mock
-//    private PetRepository petRepository;
-//    private PetOuterClass.CreatePetRequest createPetRequest;
-//    private PetOuterClass.CreatePetResponse createPetResponse;
+        PetOuterClass.FindByIdPetRequest request =
+                PetOuterClass.FindByIdPetRequest
+                        .newBuilder()
+                        .setPetId(petId)
+                        .build();
 
-//    @BeforeEach
-//    public void setUp() throws Exception {
-//        createPetRequest = PetOuterClass.CreatePetRequest
-//                .newBuilder()
-//                .setPet(PetOuterClass.CreatePetRequest.Pet
-//                        .newBuilder()
-//                        .setPetId(1)
-//                        .setPetName("Bob")
-//                        .setPetType("Dog")
-//                        .setPetBirthDate("2010-11-03")
-//                        .setOwnerLastName("Vyrostkov")
-//                        .setOwnerFirstName("Mikhail")
-//                        .setOwnerMiddleName("Yurevich")
-//                        .setOwnerAge(28)
-//                        .setOwnerAddress("Moscow")
-//                        .setOwnerTelephone("89258127349")
-//                        .setVaccinationName("Covid_19")
-//                        .setVaccinationDate("2019-12-24")
-//                        .build())
-//                .build();
-//
-//        createPetResponse = PetOuterClass.CreatePetResponse
-//                .newBuilder()
-//                .setPetId(1)
-//                .build();
-//    }
+        PetOuterClass.FindByIdPetResponse response =
+                petServiceBlockingStub.findByIDPet(request);
 
-//    @Test
-//    @DisplayName("JUnit grpc test for create pet")
-//    public void createPetTest() {
-//
-//        when(grpcPetService.createPet(any(PetOuterClass.CreatePetRequest.class),
-//                any(StreamObserver.class)))
-//                .thenReturn(createPetResponse);
-//
-//        StreamObserver<PetOuterClass.CreatePetResponse> streamObserver = mock(StreamObserver.class);
-//
-//        grpcPetService.createPet(createPetRequest, streamObserver);
-//
-//        verify(streamObserver).onNext(createPetResponse);
-//        verify(streamObserver).onCompleted();
-//
-//    }
+        assertThat(response).isNotNull();
+        assertThat(response.getPet().getPetName()).isEqualTo(pet.getName());
+        verify(petService).findByIDPet(petId);
+    }
 
+    @Test
+    @DisplayName("JUnit grpc test for find pet by id when pet not found")
+    public void PetNotFoundWhenFindByIDTest() throws Exception {
 
+        doReturn(null)
+                .when(petService)
+                .findByIDPet(anyInt());
 
+        PetOuterClass.FindByIdPetRequest request =
+                PetOuterClass.FindByIdPetRequest
+                        .newBuilder()
+                        .setPetId(petId)
+                        .build();
 
+        StatusRuntimeException thrown =
+                Assertions.assertThrows(StatusRuntimeException.class, () ->
+                        petServiceBlockingStub.findByIDPet(request));
 
+        assertThat(thrown.getStatus().getCode().toString())
+                .isEqualTo("NOT_FOUND");
+        assertThat(thrown.getMessage())
+                .isEqualTo("NOT_FOUND: This pet with id = 1 is not found");
+        Metadata metadata = Status.trailersFromThrowable(thrown);
+        PetOuterClass.ErrorResponse errorResponse =
+                metadata.get(ProtoUtils.keyForProto(
+                                PetOuterClass.ErrorResponse.getDefaultInstance()
+                        )
+                );
+        assertThat(errorResponse.getErrorName())
+                .isEqualTo("This pet with id = 1 is not in the database");
 
-//    @Test
-//    @DisplayName("JUnit grpc test for create pet")
-//    public void createPetTest() {
-
-////        PetOuterClass.CreatePetResponse expected = PetOuterClass.CreatePetResponse
-//                .newBuilder()
-//                .setPetId(1)
-//                .build();
-//        PetOuterClass.CreatePetResponse response = stub.createPet(PetOuterClass.CreatePetRequest
-//                .newBuilder()
-//                .setPet(PetOuterClass.CreatePetRequest.Pet
-//                        .newBuilder()
-//                        .setPetId(1)
-//                        .setPetName("Bob")
-//                        .setPetType("Dog")
-//                        .setPetBirthDate("2010-11-03")
-//                        .setOwnerLastName("Vyrostkov")
-//                        .setOwnerFirstName("Mikhail")
-//                        .setOwnerMiddleName("Yurevich")
-//                        .setOwnerAge(28)
-//                        .setOwnerAddress("Moscow")
-//                        .setOwnerTelephone("89258127349")
-//                        .setVaccinationName("Covid_19")
-//                        .setVaccinationDate("2019-12-24")
-//                        .build())
-//                .build());
-//
-//        assertThat(response).isEqualTo(expected);
-//    }
-
-//    @Test
-//    @DisplayName("JUnit grpc test for find pet by id")
-//    public void findByIDPetTest() {
-//        PetOuterClass.FindByIdPetResponse expected = PetOuterClass.FindByIdPetResponse
-//                .newBuilder()
-//                .setPet(PetOuterClass.FindByIdPetResponse.Pet
-//                        .newBuilder()
-//                        .setPetName("Bob")
-//                        .setPetType("Dog")
-//                        .setPetBirthDate("2010-11-03")
-//                        .setOwnerLastName("Vyrostkov")
-//                        .setOwnerFirstName("Mikhail")
-//                        .setOwnerMiddleName("Yurevich")
-//                        .setVaccinationName("Covid_19")
-//                        .setVaccinationDate("2019-12-24")
-//                        .build())
-//                .build();
-//
-//        PetOuterClass.FindByIdPetResponse response = stub.findByIDPet(PetOuterClass.FindByIdPetRequest
-//                .newBuilder()
-//                .setPetId(1)
-//                .build());
-//
-//        assertThat(response).isEqualTo(expected);
-//    }
-//
-//    @Test
-//    @DisplayName("JUnit grpc test for find all pets")
-//    public void findAllPetTest() {
-//        Iterator<PetOuterClass.FindAllResponse> allPets = stub.findAllPet(PetOuterClass.FindAllRequest
-//                .newBuilder()
-//                .build());
-//
-//        ImmutableList<PetOuterClass.FindAllResponse> allPetList = ImmutableList.copyOf(allPets);
-//
-//        assertThat(allPetList).isNotEmpty();
-//    }
-//
-//    @Test
-//    @DisplayName("JUnit grpc test successful for find all pets by name")
-//    public void findAllByNamePetSuccessTest() {
-//        Iterator<PetOuterClass.FindAllByNameResponse> allPets = stub.findAllByName(PetOuterClass.FindAllByNamePetRequest
-//                .newBuilder()
-//                .setName("Bob")
-//                .build());
-//
-//        ImmutableList<PetOuterClass.FindAllByNameResponse> allPetList = ImmutableList.copyOf(allPets);
-//
-//        assertThat(allPetList).isNotEmpty();
-//    }
-//
-//    @Test
-//    @DisplayName("JUnit grpc test unsuccessful for find all pets by name")
-//    public void findAllByNamePetUnSuccessTest() {
-//        Iterator<PetOuterClass.FindAllByNameResponse> allPets = stub.findAllByName(PetOuterClass.FindAllByNamePetRequest
-//                .newBuilder()
-//                .setName("Che")
-//                .build());
-//
-//        ImmutableList<PetOuterClass.FindAllByNameResponse> allPetList = ImmutableList.copyOf(allPets);
-//
-//        assertThat(allPetList).isEmpty();
-//    }
-//
-//    @Test
-//    @DisplayName("JUnit grpc test successful for delete pet by id")
-//    public void deletePetSuccessTest() {
-//        PetOuterClass.DeletePetResponse expected = PetOuterClass.DeletePetResponse
-//                .newBuilder()
-//                .build();
-//
-//        PetOuterClass.DeletePetResponse response = stub.deletePet(PetOuterClass.DeletePetRequest
-//                .newBuilder()
-//                .setPetId(1)
-//                .build());
-//
-//        assertThat(response).isEqualTo(expected);
-//    }
-//
-//    @Test
-//    @DisplayName("JUnit grpc test successful for delete pet by id")
-//    public void updatePetTest() {
-//        PetOuterClass.UpdatePetResponse expected = PetOuterClass.UpdatePetResponse
-//                .newBuilder()
-//                .setPet(PetOuterClass.UpdatePetResponse.Pet
-//                        .newBuilder()
-//                        .setPetName("Bob")
-//                        .setPetType("Dog")
-//                        .setPetBirthDate("2010-11-03")
-//                        .setVaccinationName("Covid_19")
-//                        .setVaccinationDate("2019-12-24")
-//                        .build())
-//                .build();
-//
-//        PetOuterClass.UpdatePetResponse response = stub.updatePet(PetOuterClass.UpdatePetRequest
-//                .newBuilder()
-//                .setPet(PetOuterClass.UpdatePetRequest.Pet
-//                        .newBuilder()
-//                        .setPetName("Bob")
-//                        .setPetType("Dog")
-//                        .setPetBirthDate("2010-11-03")
-//                        .setVaccinationName("Covid_19")
-//                        .setVaccinationDate("2019-12-24")
-//                        .build())
-//                .build());
-//
-//        assertThat(response).isEqualTo(expected);
-//    }
+        verify(petService).findByIDPet(petId);
+    }
 }

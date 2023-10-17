@@ -1,1 +1,1 @@
-GRPC localhost:9090/ru.vyrostkov.grpc.server.grpc_server.pet.PetService/FindAllPetGRPC localhost:9090/ru.vyrostkov.grpc.server.grpc_server.pet.PetService/FindAllPetGRPC localhost:9090/ru.vyrostkov.grpc.server.grpc_server.pet.PetService/FindAllPet
+GRPC localhost:9090/ru.vyrostkov.grpc.server.grpc_server.pet.PetService/FindByIDPetGRPC localhost:9090/ru.vyrostkov.grpc.server.grpc_server.pet.PetService/FindAllPetGRPC localhost:9090/ru.vyrostkov.grpc.server.grpc_server.pet.PetService/FindAllPetGRPC localhost:9090/ru.vyrostkov.grpc.server.grpc_server.pet.PetService/FindAllPet
