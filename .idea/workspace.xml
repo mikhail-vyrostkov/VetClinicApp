@@ -5,46 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9b3eb00-a38d-4061-a89a-bddc37e3ae2a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/dac38d57-5eab-4240-a6aa-4392a08268cb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/dac38d57-5eab-4240-a6aa-4392a08268cb.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/dac38d57-5eab-4240-a6aa-4392a08268cb/storage_v2/_src_/database/pet_clinic.CLCswQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/dac38d57-5eab-4240-a6aa-4392a08268cb/storage_v2/_src_/database/pet_clinic.CLCswQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/dac38d57-5eab-4240-a6aa-4392a08268cb/storage_v2/_src_/database/pet_clinic.CLCswQ/schema/vetclinic.zczH-g.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/dac38d57-5eab-4240-a6aa-4392a08268cb/storage_v2/_src_/database/pet_clinic.CLCswQ/schema/vetclinic.zczH-g.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clinic-grpc-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/GrpcApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/GrpcApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/dto/PetRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/dto/PetRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/dto/PetResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/dto/PetResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/BaseEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/Booking.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/DutySchedule.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/Owner.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/Pet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/PetType.java" beforeDir="false" afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/PetType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/Speciality.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/Vaccination.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/Vet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/models/Visit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/BookingRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/DutyScheduleRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/OwnerRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/PetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/PetRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/PetTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/PetTypeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/SpecialityRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/VaccinationRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/VetRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/repositories/VisitRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/service/PetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/service/PetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/service/PetServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/service/PetServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/serviceGrpc/GrpcPetServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/serviceGrpc/GrpcPetServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/clinic-grpc-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/test/java/ru/vyrostkov/grpc/config/GrpcPetServiceTestConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/test/java/ru/vyrostkov/grpc/repositories/PetRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/clinic-grpc-service/src/test/java/ru/vyrostkov/grpc/repositories/PetRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/test/java/ru/vyrostkov/grpc/repositories/PgContainerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/clinic-grpc-service/src/test/java/ru/vyrostkov/grpc/repositories/PgContainerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/test/java/ru/vyrostkov/grpc/serviceGrpc/GrpcPetServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/clinic-grpc-service/src/test/java/ru/vyrostkov/grpc/serviceGrpc/GrpcPetServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/04-create-pets-table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db-migration/src/main/resources/1-core/1-create_table/04-create-pets-table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-grpc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/interface-grpc/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-grpc/src/main/proto/Pet.proto" beforeDir="false" afterPath="$PROJECT_DIR$/interface-grpc/src/main/proto/Pet.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/main/java/ru/vyrostkov/grpc/service/GrpcPetServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinic-grpc-service/src/test/java/ru/vyrostkov/grpc/GrpcPetServiceImplTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface-grpc/src/main/proto/Vet.proto" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,16 +30,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2U9RHs2m2OyImTEexZG6uuBLPBY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -85,6 +56,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/m.vyrostkov/IdeaProjects/petProject/VetClinicApp/clinic-grpc-service/src/test/java/ru/vyrostkov/grpc&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -209,9 +181,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GrpcPetServiceImplTest" />
         <item itemvalue="JUnit.PetRepositoryTest" />
         <item itemvalue="JUnit.GrpcPetServiceImplTest.PetNotFoundWhenFindByIDTest" />
-        <item itemvalue="JUnit.GrpcPetServiceImplTest" />
         <item itemvalue="JUnit.GrpcPetServiceImplTest.findByIDPetTest" />
       </list>
     </recent_temporary>
